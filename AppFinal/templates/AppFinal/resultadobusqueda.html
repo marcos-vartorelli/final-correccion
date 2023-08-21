@@ -1,0 +1,10 @@
+<p>Estamos buscando el : {{nombre_cliente}}</p>
+
+{% if clientes %}
+       <ul>
+        {% for cliente in clientes %}
+            <li>{{cliente.nombre_cliente}}</li>
+        {% endfor %}
+       </ul>
+       
+{% endif %}

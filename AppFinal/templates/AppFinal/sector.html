@@ -1,0 +1,25 @@
+{% extends 'AppFinal/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<!--aca va lo que cambia-->
+    {% if formulario.errors %}
+
+    <p style="color: red;"> Estan mal los datos</p>
+
+    {% endif %}
+    <form action="" method="POST">{% csrf_token %}
+
+        <table>
+            {{ formulario.as_table}}
+        </table>
+
+
+        <input type="submit", value="Enviar">
+        
+    </form>
+
+
+{% endblock %}

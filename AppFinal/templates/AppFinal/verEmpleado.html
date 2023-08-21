@@ -1,0 +1,25 @@
+{% extends "AppFinal/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1> - Listado de Empleados -</h1>
+
+<body>
+    {% for c in empleado %}
+
+    <li>{{c}}</li>
+    
+            <button>
+        <a href="{% url 'eliminarEmpleado' c.nombre_empleado %}">Eliminar</a>
+        <a href="{% url 'editarEmpleado' c.nombre_empleado %}">Editar</a>
+        </button>
+
+    {% endfor %}
+
+     <br>
+    <a href="empleado">Agregar empleado</a>
+</body>
+</html>
+{% endblock %}
