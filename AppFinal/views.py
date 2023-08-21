@@ -207,7 +207,7 @@ def verEmpleado(request):
 
 def eliminarEmpleado(request, nombre_empleado):
  
-    empleado = Empleado.objects.get(nombre_empleado = nombre_empleado)
+    empleado = Empleado.objects.filter(nombre_empleado = nombre_empleado)
     empleado.delete()
  
     empleado = Empleado.objects.all()  
